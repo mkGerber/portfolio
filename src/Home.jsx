@@ -13,7 +13,7 @@ function Home() {
           </p>
         </div>
         <div className="picture">
-          <img src="/Headshot.jpg" alt="Michael Gerber" />
+          <img src="portfolio/public/images/Headshot.jpg" alt="Michael Gerber" />
         </div>
       </main>
       <Footer />
