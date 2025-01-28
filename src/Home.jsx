@@ -13,7 +13,7 @@ function Home() {
           </p>
         </div>
         <div className="picture">
-          <img src={`${process.env.PUBLIC_URL}/Headshot.jpg`} alt="Michael Gerber" />
+          <img src="/Headshot.jpg" alt="Michael Gerber" />
         </div>
       </main>
       <Footer />
