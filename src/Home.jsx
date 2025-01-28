@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './Home.css';
 import Navbar from './components/Navbar.jsx'; // No curly braces for default exports
 import Footer from './components/Footer.jsx';
+import Headshot from './Headshot.jpg';
 
 function Home() {
   return (
@@ -16,7 +17,7 @@ function Home() {
 
         </div>
         <div className="picture">
-          <img src="/Headshot.jpg" alt="Michael Gerber" />
+          <img src={Headshot} alt="Michael Gerber" />
         </div>
       </main>
       <Footer />
