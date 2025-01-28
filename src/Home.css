@@ -5,17 +5,15 @@ main {
     height: 100vh;
     background-color: #1a1a23;
     color: white;
-    opacity: 0; /* Initially hidden */
-    animation: fadeIn 1s ease forwards; /* Fade-in animation for the main container */
     gap: 2rem; /* Add spacing between sections */
     padding: 2rem; /* Add padding to ensure content doesn't touch edges */
 }
 
 .aboutMe,
 .picture {
-    flex: 1; /* Ensures equal width (50% each) */
-    max-width: 50%; /* Explicitly define max width for flexibility */
-    min-width: 300px; /* Prevents shrinking too small */
+    flex: 1;
+    max-width: 50%;
+    min-width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -28,7 +26,7 @@ main {
 }
 
 .picture {
-    background-color: transparent; 
+    background-color: transparent;
 }
 
 .aboutMe {
@@ -36,16 +34,18 @@ main {
     font-weight: 300;
     line-height: 1.6;
     color: #d1d1e0;
-    animation: slideInFromLeft 1.2s ease forwards; /* Slide-in animation for aboutMe */
+    opacity: 0; /* Initially hidden for animation */
+    animation: slideInFromLeft 1.2s ease forwards;
 }
 
 .picture {
-    animation: slideInFromRight 1.2s ease forwards; /* Slide-in animation for picture */
+    opacity: 0; /* Initially hidden for animation */
+    animation: slideInFromRight 1.2s ease forwards;
 }
 
 .picture img {
-    width: 100%; /* Ensure the image adjusts within the container */
-    max-width: 300px; /* Prevents the image from being too large */
+    width: 100%;
+    max-width: 300px;
     border-radius: 10%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -55,32 +55,54 @@ main {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
 }
 
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 @media (max-width: 1024px) {
     main {
-        gap: 1.5rem; /* Reduce spacing between sections */
+        gap: 1.5rem;
         padding: 1.5rem;
     }
 
     .aboutMe,
     .picture {
-        max-width: 50%; /* Ensures 50% width on smaller desktop screens */
+        max-width: 50%;
     }
 }
 
 @media (max-width: 768px) {
     main {
-        flex-direction: column; /* Stack sections vertically */
-        height: auto; /* Allow content to expand dynamically */
-        gap: 1.5rem; /* Adjust spacing for vertical layout */
+        flex-direction: column;
+        height: auto;
+        gap: 1.5rem;
     }
 
     .aboutMe,
     .picture {
-        max-width: 100%; /* Full width for smaller screens */
+        max-width: 100%;
         padding: 1.5rem;
     }
 
     .picture img {
-        max-width: 70%; /* Slightly larger image for better visibility */
+        max-width: 70%;
     }
 }
