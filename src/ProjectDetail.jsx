@@ -18,7 +18,7 @@ import AUS2 from '../public/assets/AUS2.png';
 import AUS3 from '../public/assets/AUS3.jpg';
 import AUS4 from '../public/assets/AUS4.jpg';
 import AUS5 from '../public/assets/AUS5.jpg';
-import AUSVideo from '../public/assets/AUS-V1.mov';
+import AUSVideo from '../public/assets/AUS-V1.MOV';
 import GameWishlist1 from '../public/assets/GameWishlist1.png'; 
 import GameWishlist2 from '../public/assets/GameWishlist2.png';
 import GameWishlist3 from '../public/assets/GameWishlist3.png';
