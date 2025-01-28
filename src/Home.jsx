@@ -1,9 +1,12 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './Home.css';
 import Navbar from './components/Navbar.jsx'; // No curly braces for default exports
 import Footer from './components/Footer.jsx';
 
 function Home() {
+  useEffect(() => {
+    console.log("Current Directory: ", __dirname);
+  }, []);
   return (
     <>
       <main div className="home">
