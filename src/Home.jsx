@@ -4,9 +4,6 @@ import Navbar from './components/Navbar.jsx'; // No curly braces for default exp
 import Footer from './components/Footer.jsx';
 
 function Home() {
-  useEffect(() => {
-    console.log("Current Directory: ", __dirname);
-  }, []);
   return (
     <>
       <main div className="home">
@@ -17,6 +14,8 @@ function Home() {
         </div>
         <div className="picture">
           <img src="../public/images/Headshot.jpg" alt="Michael Gerber" />
+          <p>Current Directory: </p>
+          <p>{process.cwd()}</p>
         </div>
       </main>
       <Footer />
