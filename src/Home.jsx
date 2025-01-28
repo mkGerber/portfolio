@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import './Home.css';
 import Navbar from './components/Navbar.jsx'; // No curly braces for default exports
 import Footer from './components/Footer.jsx';
@@ -13,7 +13,7 @@ function Home() {
           </p>
         </div>
         <div className="picture">
-          <img src="../public/images/Headshot.jpg" alt="Michael Gerber" />
+          <img src="Headshot.jpg" alt="Michael Gerber" />
         </div>
       </main>
       <Footer />
