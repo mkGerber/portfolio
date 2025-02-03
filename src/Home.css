@@ -34,13 +34,11 @@ main {
     font-weight: 300;
     line-height: 1.6;
     color: #d1d1e0;
-    opacity: 0; /* Initially hidden for animation */
-    animation: slideInFromLeft 1.2s ease forwards;
+    opacity: 100; /* Initially hidden for animation */
 }
 
 .picture {
-    opacity: 0; /* Initially hidden for animation */
-    animation: slideInFromRight 1.2s ease forwards;
+    opacity: 100; /* Initially hidden for animation */
 }
 
 .picture img {
@@ -55,27 +53,7 @@ main {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
 }
 
-@keyframes slideInFromLeft {
-    0% {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
 
-@keyframes slideInFromRight {
-    0% {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
 
 @media (max-width: 1024px) {
     main {
